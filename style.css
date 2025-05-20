@@ -25,18 +25,20 @@
     --button-padding: 12px 18px;
 }
 
+
+
 body {
     font-family: var(--font-family-base);
     margin: 0;
     background-color: var(--background-color);
     color: var(--text-color);
+    text-align: left;
 }
 
 .container {
     max-width: 400px;
     margin: 0 auto;
     padding: var(--spacing-medium);
-    text-align: center;
 }
 
 .logo-container {
@@ -44,6 +46,7 @@ body {
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    gap: 24px;
     margin-bottom: var(--spacing-medium);
 }
 
@@ -51,9 +54,9 @@ body {
     margin-top: var(--spacing-small);
     font-size: var(--font-size-medium);
     color: var(--secondary-text-color);
-    text-align: center;
+    
     font-family: Poppins;
-    font-weight: 600;
+    font-weight: bold;
     font-size: 13px;
     letter-spacing: 0%;
 }
@@ -67,6 +70,16 @@ h1 {
     font-size: var(--font-size-title);
     font-weight: bold;
     margin-bottom: var(--spacing-small);
+    
+    font-size: 25px;
+}
+
+
+#title-normal {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 25px;
+    font-weight: 500;
 }
 
 .subtitle {
@@ -77,6 +90,7 @@ h1 {
 
 .description {
     font-size: var(--font-size-small);
+    
     color: var(--subtext-color);
     margin-bottom: var(--spacing-large);
 }
@@ -91,6 +105,29 @@ h1 {
     cursor: pointer;
     text-decoration: none;
     display: inline-block;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    /* Adiciona animação contínua */
+}
+
+.button2 {
+    vertical-align: middle;
+    margin-left: 16px;
+    animation: pulse 1.2s infinite alternate;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.07);
+    }
+}
+
+.cta-button:hover {
+    animation: none;
+    transform: scale(1.12);
 }
 
 .cta-button img {
@@ -102,4 +139,146 @@ h1 {
 .faixa {
     width: 100%;
     margin-top: var(--spacing-xlarge);
+}
+
+
+.certificado-section {
+  background-color: #ffffff;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  border-top: 5px solid #ff6b00;
+}
+
+.container h2 {
+  font-size: 20px;
+  margin-bottom: 30px;
+  color: #000;
+}
+
+.container h2 span {
+  font-weight: bold;
+  color: #4b4b4b;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  
+  gap: 10px;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 28px;
+}
+
+.icon-check {
+  width: 24px;
+  height: 24px;
+  margin-top: 5px;
+}
+
+.item h3 {
+  font-size: 16px;
+  margin: 0 0 5px;
+  color: #333;
+}
+
+.item p {
+  font-size: 14px;
+  color: #666;
+  margin: 0;
+}
+
+.divider {
+    width: 100%;
+    height: 3px;
+    background-color: #ececec;
+    margin: var(--spacing-large) 0;
+    border: none;
+}
+
+
+.mais-vendidos-section {
+  background-color: #ffffff;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.mais-vendidos-container {
+  text-align: center;
+}
+
+.mais-vendidos-subtitulo {
+  font-size: 12px;
+  color: #666;
+  margin-bottom: 5px;
+}
+
+.mais-vendidos-titulo {
+  font-size: 18px;
+  margin: 0 0 25px;
+  color: #000;
+}
+
+.mais-vendidos-titulo strong {
+  font-weight: bold;
+  color: #000;
+}
+
+.mais-vendidos-produto {
+  background-color: #f7f7f7;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.mais-vendidos-img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
+.mais-vendidos-info {
+  text-align: left;
+}
+
+.mais-vendidos-info h3 {
+  margin: 0 0 5px;
+  font-size: 14px;
+  color: #333;
+}
+
+.mais-vendidos-preco {
+  font-size: 18px;
+  color: #000;
+  font-weight: bold;
+  margin: 0;
+}
+
+.mais-vendidos-parcelado {
+  font-size: 13px;
+  color: #888;
+  margin: 0;
+}
+
+.mais-vendidos-cta {
+  margin-top: 20px;
+  background-color: #ff6b00;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  width: 100%;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.mais-vendidos-cta:hover {
+  background-color: #e65e00;
 }
